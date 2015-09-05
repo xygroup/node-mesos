@@ -164,8 +164,10 @@ describe('Chronos', function() {
       should.not.exist(err);
 
       should.exist(data);
+      should.exist(data.histogram);
+      should.exist(data.taskStatHistory);
 
-      data.should.have.keys(
+      data.histogram.should.have.keys(
         '75thPercentile',
         '95thPercentile',
         '98thPercentile',
